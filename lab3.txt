@@ -1,0 +1,202 @@
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
+
+export default function App() {
+    return (
+      <View style = { styles.container } >
+        <View style = {styles.sp}>
+          <Image
+          style={{width: '310px', height: '361px'}}
+          source={require('./pic/vs_blue.png')}
+          ></Image>
+        </View>
+        <View style = {styles.ctsp}>
+          <Text style={styles.tensp}>
+            Điện Thoại Vsmart Joy 3 - Hàng chính hãng</Text>
+          <View style={styles.votegroup}>
+            <View style={styles.star}>
+              <Image
+                style={styles.star1}
+                source={require('./pic/star.png')}
+              ></Image>
+              <Image
+                style={styles.star2}
+                source={require('./pic/star.png')}
+              ></Image>
+              <Image
+                style={styles.star3}
+                source={require('./pic/star.png')}
+              ></Image>
+              <Image
+                style={styles.star4}
+                source={require('./pic/star.png')}
+              ></Image>
+              <Image
+                style={styles.star5}
+                source={require('./pic/star.png')}
+              ></Image>
+            </View>
+            <Text style={styles.vote}>(Xem 828 đánh giá)</Text>
+          </View>
+          <View style={styles.gia}>
+            <Text style={styles.thanhTien}>1.790.000 đ</Text>
+            <Text style={styles.nguyenGia}>1.790.000 đ</Text>
+          </View>
+          <View style={styles.hoanTien}>
+            <Text style={styles.textHoan}>Ở ĐÂU RẺ HƠN HOÀN TIỀN</Text>
+            {/* <Image
+            style={styles.question}
+            source={require('./pic/question.png')}></Image> */}
+          </View>
+          <View>
+            <TouchableOpacity onPress={() => {/* go to Screen2 */}}>
+              <View style={styles.btnChonMau}>
+                <Text style={styles.txtChonMau}>4 MÀU-CHỌN MÀU</Text>
+              </View>
+            </TouchableOpacity>
+          </View>
+        </View>
+      </View>
+    );
+}
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    sp: {
+        flex: 1
+    },
+    ctsp: {
+        flex: 1
+    },
+    tensp:{
+      width: '288px', 
+      height: '18px',
+      top: '20px', 
+      justifyContent: 'flex-start',
+      fontFamily: 'Roboto',
+      fontWeight: 400,
+      fontSize: '15px',
+      lineHeight: '17.58px'
+    },
+    votegroup:{
+      width: '270px',
+      justifyContent: 'space-between',
+      flexDirection: 'row'
+    },
+    star:{
+      width: '115px',
+      justifyContent: 'space-between',
+      flexDirection: 'row'
+    },
+    star1: {
+      height: '25px',
+      width: '23px',
+      top: '30px',
+    },
+    star2: {
+      height: '25px',
+      width: '23px',
+      top: '30px',
+      left: '47'
+    },
+    star3: {
+      height: '25px',
+      width: '23px',
+      top: '30px',
+    },
+    star4: {
+      height: '25px',
+      width: '23px',
+      top: '30px',
+    },
+    star5: {
+      height: '25px',
+      width: '23px',
+      top: '30px'
+    },
+    vote:{
+      width: '135px',
+      height: '18px',
+      top: '35px',
+      fontFamily: 'Roboto',
+      fontWeight: 400,
+      fontSize: '15px',
+      lineHeight: '17.58px'
+    },
+    gia:{
+      width: '270px',
+      justifyContent: 'space-between',
+      flexDirection: 'row'
+    },
+    thanhTien:{
+      width: '99px',
+      height: '21px',
+      top: '40px',
+      fontFamily: 'Roboto',
+      fontWeight: 700,
+      fontSize: '18px',
+      lineHeight: '21.09px'
+    },
+    nguyenGia:{
+      width: '83px',
+      height: '18px',
+      top: '42px',
+      fontFamily: 'Roboto',
+      fontWeight: 700,
+      fontSize: '15px',
+      lineHeight: '17.58px'
+    },
+    hoanTien:{
+      width: '200px',
+      flexDirection: 'row'
+    },
+    textHoan:{
+      width: '170px',
+      height: '14px',
+      top: '60px',
+      fontFamily: 'Roboto',
+      fontWeight: 700,
+      fontSize: '12px',
+      lineHeight: '14.06px',
+      color: 'red',
+      gap: '5px'
+    },
+    question:{
+      width: '20px',
+      height:'20px'
+    },
+    btnChonMau:{
+      width: '332px',
+      height: '34px',
+      top: '90px',
+      left: '18px',
+      borderRadius: '10px',
+      borderWidth: '1px',
+      borderColor: '#C4C4C4',
+      gap: '100px'
+    },
+    txtChonMau:{
+      width: '200px',
+      height: '18px',
+      fontFamily: 'Roboto',
+      fontWeight: 700,
+      fontSize: '18px',
+      lineHeight: '21.09px',
+      left: '90px'
+    },
+    btnChonMua:{
+      width: '326px',
+      height: '44px',
+      top: '583px',
+      left: '21px',
+      borderRadius: '10px',
+      border: '1px',
+
+    }
+
+});
